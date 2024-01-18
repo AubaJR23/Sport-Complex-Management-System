@@ -10,15 +10,24 @@ use App\Models\Product;
 
 use App\Models\Order;
 
+use App\Models\Staff;
+
+use App\Models\maintenance;
+
+use App\Models\Booking;
+
+
+use DB;
+
 class AdminController extends Controller
 {
-    public function product()
+    public function updatestaff()
     {
         if(Auth::id())
         {
             if(Auth::user()->usertype=='1')
             {
-                return view('admin.product');
+                return view('admin.updatestaff');
             }
 
             else
@@ -35,95 +44,54 @@ class AdminController extends Controller
 
     }
 
-    public function uploadproduct(Request $request)
+    public function store(Request $request)
 
     {
-        $data=new product;
+        $staff=new Staff();
+        $staff->staff_name = $request -> staff_name;
+        $staff->staff_role = $request -> staff_role;
+        $staff->staff_shift = $request -> staff_shift;
+        $staff->staff_email = $request -> staff_email;
 
-        $image=$request->file;
+        $staff->save();
 
-        $imagename=time().'.'.$image->getClientOriginalExtension();
-
-        $request->file->move('productimage', $imagename);
-
-        $data->image=$imagename;
-
-        $data->title=$request->title;
-        $data->price=$request->price;
-        $data->description=$request->des;
-        $data->quantity=$request->quantity;
-
-        $data->save();
-
-        return redirect()->back()->with('message', 'Product added succesfully');
+        return redirect()->back()->with('message', 'Staff added succesfully');
     }
 
-    public function showproduct()
+    public function showstaff()
     {
 
-        $data=product::all();
+        $staff=Staff::all();
 
-        return view('admin.showproduct',compact('data'));
+        return view('admin.stafflist',compact('staff'));
     }
 
-    public function deleteproduct($id)
+    public function changestaff($staff_id)
     {
-        $data=product::find($id);
+        $data=staff::find($staff_id);
+
+        return view('admin.changestaff', compact('data'));
+    }
+
+    public function deletestaff($staff_id)
+    {
+        $data=Staff::find($staff_id);
         $data->delete();
-        return redirect()->back()->with('message', 'Product Deleted');;
+        return redirect()->back()->with('message', 'Staff Data Deleted');;
 
     }
 
-    public function updateview($id)
+    public function updatechangestaff(Request $request, $staff_id)
     {
-        $data=product::find($id);
+        $data=Staff::find($staff_id);
 
-        return view('admin.updateview', compact('data'));
-    }
-
-    public function updateproduct(Request $request, $id)
-    {
-        $data=product::find($id);
-
-        $image=$request->file;
-
-        if($image)
-        {
-
-        $imagename=time().'.'.$image->getClientOriginalExtension();
-
-        $request->file->move('productimage', $imagename);
-
-        $data->image=$imagename;
-
-        }
-
-        $data->title=$request->title;
-        $data->price=$request->price;
-        $data->description=$request->des;
-        $data->quantity=$request->quantity;
+        $data->staff_name = $request -> staff_name;
+        $data->staff_role = $request -> staff_role;
+        $data->staff_shift = $request -> staff_shift;
+        $data->staff_email = $request -> staff_email;
 
         $data->save();
 
-        return redirect()->back()->with('message', 'Product updated succesfully');
-    }
-
-    public function showorder()
-    {
-        $order=order::all();
-
-        return view('admin.showorder', compact('order'));
-    }
-
-    public function updatestatus($id)
-    {
-        $order=order::find($id);
-
-        $order->status='delivered';
-
-        $order->save();
-
-        return redirect()->back();
-
+        return redirect()->back()->with('message', 'Staff Data updated succesfully');
     }
 }

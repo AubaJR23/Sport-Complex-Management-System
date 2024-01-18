@@ -9,6 +9,8 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\maintenance;
+use App\Models\Booking;
 
 class HomeController extends Controller
 {

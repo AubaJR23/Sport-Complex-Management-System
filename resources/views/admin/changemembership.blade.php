@@ -2,8 +2,6 @@
 <html lang="en">
   <head>
 
-    @include('admin.css')
-
     <style type="text/css">
 
     .title
@@ -18,8 +16,10 @@
         display: inline-block;
         width: 200px;
     }
-
     </style>
+    <base href="/public">
+
+    @include('admin.css')
 
   </head>
   <body>
@@ -39,7 +39,7 @@
       <div class="container-fluid page-body-wrapper">
 
         <div class="container" style="text-align: center;">
-            <h1 class="title">ADD PRODUCT</h1>
+            <h1 class="title">CHANGE STAFF</h1>
 
             @if(session()->has('message'))
 
@@ -53,49 +53,51 @@
 
             @endif
 
-            <form action="{{url('uploadproduct')}}" method="post" enctype="multipart/form-data">
+            <form action="{{url('updatechangemembership',$data->membership_id)}}" method="get" enctype="multipart/form-data">
 
                 @csrf
 
             <div style="padding:15px;">
-                <label>Product title</label>
+                <label>Customer Name</label>
 
-                <input style="color: black;" type="text" name="title" placeholder="Give a product title"
+                 <input style="color: black;" type="text" name="customer_name" value="{{$data->customer_name}}"
+                 required="">
+            </div>
+
+            <div style="padding:15px;">
+                <label>Customer Email</label>
+
+                <input style="color: black;" type="email" name="customer_email" value="{{$data->customer_email}}"
                 required="">
             </div>
 
 
             <div style="padding:15px;">
-                <label>Price</label>
+                <label>Membership Level</label>
 
-                <input style="color: black;" type="number" name="price" placeholder="Give a price"
-                required="">
+                <select style="color: black;" type="enum" name="membership_level" value="{{$data->membership_level}}" required>
+                    <option value="Bronze">Bronze</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Platinum">Platinum</option>
+                </select>
             </div>
 
 
             <div style="padding:15px;">
-                <label>Description</label>
+                <label>Duration</label>
 
-                <input style="color: black;" type="text" name="des" placeholder="Give a description"
-                required="">
+                <select style="color: black;" type="enum" name="duration" value="{{$data->duration}}" required>
+                    <option value="3 months">3 months</option>
+                    <option value="6 months">6 months</option>
+                    <option value="9 months">9 months</option>
+                    <option value="12 months">12 months</option>
+                </select>
             </div>
 
-
-            <div style="padding:15px;">
-                <label>Quantity</label>
-
-                <input style="color: black;" type="text" name="quantity" placeholder="Product Quantity"
-                required="">
-            </div>
-
-
-            <div style="padding:15px;">
-                <input type="file" name="file">
-            </div>
-
-
+            <br>
             <div class="btn btn-success" style="padding:15px;">
-                <button type="submit"> ADD </button>
+                <button type="submit"> -= CHANGE =- </button>
             </div>
 
         </form>

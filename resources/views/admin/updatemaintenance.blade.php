@@ -39,7 +39,7 @@
       <div class="container-fluid page-body-wrapper">
 
         <div class="container" style="text-align: center;">
-            <h1 class="title">ADD PRODUCT</h1>
+            <h1 class="title">UPDATE MAINTENANCE</h1>
 
             @if(session()->has('message'))
 
@@ -53,49 +53,52 @@
 
             @endif
 
-            <form action="{{url('uploadproduct')}}" method="post" enctype="multipart/form-data">
+            <form action="{{url('addmaintenance')}}" method="post" enctype="multipart/form-data">
 
                 @csrf
 
             <div style="padding:15px;">
-                <label>Product title</label>
+                <label>Facility Name</label>
 
-                <input style="color: black;" type="text" name="title" placeholder="Give a product title"
+                 <input style="color: black;" type="text" name="facility_name" placeholder="Facility Name"
+                 required="">
+            </div>
+
+            <div style="padding:15px;">
+                <label>Facility Type</label>
+                <select style="color: black;" name="facility_type" required>
+                <option value="Indoor">Indoor</option>
+                <option value="Outdoor">Outdoor</option>
+                </select>
+            </div>
+
+
+            <div style="padding:15px;">
+                <label>Facility Description</label>
+
+                <input style="color: black;" type="text" name="facility_description" placeholder="Description"
                 required="">
             </div>
 
 
             <div style="padding:15px;">
-                <label>Price</label>
+                <label>Facility Last Maintenance</label>
 
-                <input style="color: black;" type="number" name="price" placeholder="Give a price"
+                <input style="color: black;" type="date" name="facility_last_maintenance" placeholder="YYYY-MM-DD"
                 required="">
+           </div>
+
+           <div style="padding:15px;">
+                <label>Maintenance Status</label>
+                <select style="color: black;" name="maintenance_status" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                </select>
             </div>
 
-
-            <div style="padding:15px;">
-                <label>Description</label>
-
-                <input style="color: black;" type="text" name="des" placeholder="Give a description"
-                required="">
-            </div>
-
-
-            <div style="padding:15px;">
-                <label>Quantity</label>
-
-                <input style="color: black;" type="text" name="quantity" placeholder="Product Quantity"
-                required="">
-            </div>
-
-
-            <div style="padding:15px;">
-                <input type="file" name="file">
-            </div>
-
-
+            <br>
             <div class="btn btn-success" style="padding:15px;">
-                <button type="submit"> ADD </button>
+                <button type="submit"> -= ADD =- </button>
             </div>
 
         </form>

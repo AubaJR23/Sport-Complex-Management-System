@@ -39,7 +39,7 @@
       <div class="container-fluid page-body-wrapper">
 
         <div class="container" style="text-align: center;">
-            <h1 class="title">ADD PRODUCT</h1>
+            <h1 class="title">UPDATE BOOKING</h1>
 
             @if(session()->has('message'))
 
@@ -53,49 +53,42 @@
 
             @endif
 
-            <form action="{{url('uploadproduct')}}" method="post" enctype="multipart/form-data">
+            <form action="{{url('addbooking')}}" method="post" enctype="multipart/form-data">
 
                 @csrf
 
             <div style="padding:15px;">
-                <label>Product title</label>
+                <label>Customer Name</label>
 
-                <input style="color: black;" type="text" name="title" placeholder="Give a product title"
+                 <input style="color: black;" type="text" name="booking_customer" placeholder="Name"
+                 required="">
+            </div>
+
+            <div style="padding:15px;">
+                <label>Booked Facility</label>
+
+                <input style="color: black;" type="text" name="booking_facility" placeholder="Facility"
                 required="">
             </div>
 
 
             <div style="padding:15px;">
-                <label>Price</label>
+                <label>Time Start Booking</label>
 
-                <input style="color: black;" type="number" name="price" placeholder="Give a price"
+                <input style="color: black;" type="datetime-local" name="booking_start" placeholder="Start at"
                 required="">
             </div>
 
 
             <div style="padding:15px;">
-                <label>Description</label>
+                <label>Time Booking End</label>
 
-                <input style="color: black;" type="text" name="des" placeholder="Give a description"
+                <input style="color: black;" type="datetime-local" name="booking_end" placeholder="End at"
                 required="">
             </div>
-
-
-            <div style="padding:15px;">
-                <label>Quantity</label>
-
-                <input style="color: black;" type="text" name="quantity" placeholder="Product Quantity"
-                required="">
-            </div>
-
-
-            <div style="padding:15px;">
-                <input type="file" name="file">
-            </div>
-
-
+            <br>
             <div class="btn btn-success" style="padding:15px;">
-                <button type="submit"> ADD </button>
+                <button type="submit"> -= ADD =- </button>
             </div>
 
         </form>
