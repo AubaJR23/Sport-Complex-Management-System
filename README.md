@@ -1,7 +1,6 @@
 # Final Report
 
 # Group 3
-# Project Title - Sport Complex Management System
 ## Group Members:
 1. AHMAD SYAFIQ DANIEL BIN SYAHRUL FADZIL 2110919
 2. FAHMI AHMED MOHAMMED 1914939
@@ -9,9 +8,11 @@
 4. AZAM ZAKWAN BIN SHAHRIL 2010043
 5. MUHAMMAD FARHAN BUDIMAN 2017631
 
-
-
 Lecturer: DR. MOHD KHAIRUL AZMI BIN HASSAN
+
+
+# Project Title - Sport Complex Management System
+
 
 
 ## INTRODUCTION
