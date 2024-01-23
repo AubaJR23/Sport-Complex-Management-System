@@ -74,20 +74,6 @@ The Maintenance Management System helps administrator keep an eye on facility up
 ![Sequnce Diagram](https://github.com/AubaJR23/Sport-Complex-Management-System/assets/107748397/8cd69c69-b1c9-46d8-bfab-c773360c6ac2)
 
 
-## CHALLENGES AND DIFFICULTIES
-
-- Learning a new framework:
-At first, Laravel and PHP confused us, because it was our first time using laravel but we took it step by step and started to understand them better.
-
-- Teamwork Troubles:
-Working together was important, but we faced challenges with some team members not contributing as much. It makes our system development became slow and we had troubles to finish it within the dateline
-
-- Database Design and Management: 
-Designing an efficient and scalable database schema for complex sports complex data (bookings, schedules, payments etc.) demands careful planning and understanding of data relationships.
-
-- Work-Life Balance:
-Balancing university workload and a demanding project can be overwhelming. Effective time management, clear communication, and prioritizing tasks are crucial to complete this system within the due date.
-
 
 
 ## Mockup
@@ -181,3 +167,24 @@ The Membership List Page displays a list of members within the system. It includ
 ![update membership](https://github.com/AubaJR23/Sport-Complex-Management-System/assets/107748397/14aad8d8-0018-4c5a-a515-c111955cb877)
 
 The Page facilitates to creation of a new membership. Admin can input details such as member names, email, membership level, and duration.
+
+
+
+
+
+
+## CHALLENGES AND DIFFICULTIES
+
+- Learning a new framework:
+At first, Laravel and PHP confused us, because it was our first time using laravel but we took it step by step and started to understand them better.
+
+- Teamwork Troubles:
+Working together was important, but we faced challenges with some team members not contributing as much. It makes our system development became slow and we had troubles to finish it within the dateline
+
+- Database Design and Management: 
+Designing an efficient and scalable database schema for complex sports complex data (bookings, schedules, payments etc.) demands careful planning and understanding of data relationships.
+
+- Work-Life Balance:
+Balancing university workload and a demanding project can be overwhelming. Effective time management, clear communication, and prioritizing tasks are crucial to complete this system within the due date.
+
+
