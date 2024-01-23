@@ -15,11 +15,11 @@ Lecturer: DR. MOHD KHAIRUL AZMI BIN HASSAN
 
 
 ## INTRODUCTION
-   Sports complexes are vital centers of activity for our community, but efficiently managing various tasks like bookings and equipment can be challenging. That's why we're developing the Sport Complex management System, a comprehensive web tool. This system aims to simplify tasks for administrators, athletes, customers, and fans by facilitating bookings, equipment management, and event coordination through a user-friendly digital platform.
+   Sports complexes are vital centers of activity for our community, but efficiently managing various tasks like bookings and equipment can be challenging. That's why we're developing the Sports Complex Management System, a comprehensive web tool. This system aims to simplify tasks for administrators, athletes and customers by facilitating bookings, equipment management, and event coordination through a user-friendly digital platform.
 
-Sport complex staff will be able to maintain customer records effectively and quickly and properly access important information thanks to this project. The scheduling of booking facilities will be simplified, resulting in shorter wait times and faster access. Administrators will be able to keep an eye on inventories to guarantee that sport equipment is always available. They can also keep up-to-date records of staff shifts or schedules. This may result in greater teamwork as well as better workflows.
+Sport complex staff will be able to maintain customer records effectively and quickly and properly access important information thanks to this project. The scheduling of booking facilities will be simplified, resulting in shorter wait times and faster access. Administrators will be able to keep an eye on inventories to guarantee that sports equipment is always available. They can also keep up-to-date records of staff shifts or schedules. This may result in greater teamwork as well as better workflows.
 
-Throughout the application, we will ensure data management and protect data integrity. In addition, to offer a user-friendly experience, the suggested web application would have attractive and clear user interfaces, interactive forms, and simple navigation.The focus will be on enhancing operational effectiveness, enhancing the booking process, and promoting efficient communication between sport complex administrator, staff and customer.
+Throughout the application, we will ensure data management and protect data integrity. In addition, to offer a user-friendly experience, the suggested web application would have attractive and clear user interfaces, interactive forms, and simple navigation. The focus will be on enhancing operational effectiveness, enhancing the booking process, and promoting efficient communication between sport complex administrator, staff and customers.
 
 ## OBJECTIVE
 The primary objective of our proposed web application is to streamline and elevate the management processes within the sports complex, addressing operational challenges and enhancing overall efficiency. Through the integration of modules such as customer management, facility booking, equipment management, membership management, and staff management. Our aim is to simplify complex processes, reduce paperwork and elevate the standard of service in sports complex management.
@@ -43,20 +43,27 @@ The primary objective of our proposed web application is to streamline and eleva
 
 ## FEATURES AND FUNCTIONALITIES
 
-- Customer Management:
-The system enables administrators to create, update, and manage customer profiles within the sport complex database. It includes storing personal information, contact details, and membership status. Customers have access to their profiles where they can update information, view membership status, and track their activities within the sports complex.
+
 
 - Facility Booking:
 Customers can make bookings for various facilities available within the complex. They can reserve slots for courts, gymnasiums, swimming pools, and other facilities based on availability. The system provides administrators with tools to manage the booking system, view schedules, approve or reject bookings, and set rules for reservation limits and timings.
 
+
 - Equipment Management:
-The system tracks the inventory of sports equipment within the complex, including sports gear, gym equipment, and accessories. It allows administrators to manage inventory levels, monitor usage, schedule maintenance tasks, and place orders for new equipment when necessary.
+The system tracks the inventory of sports equipment within the complex, including sports gear, gym equipment, and accessories. It allows administrators to manage inventory levels, monitor usage and schedule maintenance tasks.
+
 
 - Membership Management:
-This feature enables the management of different types of memberships offered by the complex, such as monthly, yearly, or premium memberships. Customers can sign up for memberships, renew subscriptions, and view associated benefits. Administrators can oversee membership details, offer discounts, and modify subscription plans as needed.
+This feature enables the management of different types of memberships offered by the complex, such as Bronze, Silver, Gold and Platinum. It also offers some duration for that type of membership such as 3 months, 6 months, 9 months and 12 months memberships. Customers can sign up for memberships, renew subscriptions, and view associated benefits. Administrators can oversee membership details, modify subscription plans as needed.
+
 
 - Staff Management:
 Administrators can manage staff information within the system, including coaches, trainers, front desk personnel, and maintenance staff. Staff members have access to their profiles to update availability, view assigned tasks or classes, and communicate with customers. The system facilitates scheduling for staff shifts, classes, or training sessions.
+
+
+- Maintenance Management:
+The Maintenance Management System helps administrator keep an eye on facility upkeep easily. Using a central dashboard, admins can check the maintenance status of all facilities in one place. They get quick alerts for urgent maintenance needs. Staff can easily ask for maintenance help, specifying urgency and location.
+
 
 
 
@@ -64,7 +71,24 @@ Administrators can manage staff information within the system, including coaches
 ![Entity Relationship Diagram](https://github.com/AubaJR23/Sport-Complex-Management-System/assets/107748397/4e5b33d1-ec9c-4d10-bd4e-3a2a0e65ab0f)
 
 ## Sequence Diagram
-![Sequence Diagram](https://github.com/AubaJR23/Sport-Complex-Management-System/assets/107748397/21c2709a-0864-4165-8077-24edaa22db3f)
+![Sequnce Diagram](https://github.com/AubaJR23/Sport-Complex-Management-System/assets/107748397/8cd69c69-b1c9-46d8-bfab-c773360c6ac2)
+
+
+## CHALLENGES AND DIFFICULTIES
+
+- Learning a new framework:
+At first, Laravel and PHP confused us, because it was our first time using laravel but we took it step by step and started to understand them better.
+
+- Teamwork Troubles:
+Working together was important, but we faced challenges with some team members not contributing as much. It makes our system development became slow and we had troubles to finish it within the dateline
+
+- Database Design and Management: 
+Designing an efficient and scalable database schema for complex sports complex data (bookings, schedules, payments etc.) demands careful planning and understanding of data relationships.
+
+- Work-Life Balance:
+Balancing university workload and a demanding project can be overwhelming. Effective time management, clear communication, and prioritizing tasks are crucial to complete this system within the due date.
+
+
 
 ## Mockup
 1) Login Page
